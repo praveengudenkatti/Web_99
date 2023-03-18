@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+  body{
+/*     background: url(./bg.png); */
+      background-color:#734f96;
+/*     background-size: cover;
+    background-position:center; */
+  }
+  h1{
+    position: center;
+    top: 25px;
+    text-align: center;
+    font-family:'Secular One', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    -webkit-box-reflect:below 1px linear-gradient(transparent,#0008) ;
+    line-height:0.70cm;
+    outline:none;
+    animation:animate 5s linear infinite;
+  }
+  @keyframes animate {
+    0%, 18%, 28%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92%
+    {
+        color:#67d1f1;
+        text-shadown:none;
+    }
+    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%
+    {
+        color: #fff;
+        text-shadow: 0 0 10px #518ee4,
+        0 0 20px #2dccf0,
+        0 0 40px #23c5ee,
+        0 0 80px #187ee4,
+        0 0 160px #3e65ff;
+    }
+}
+  .container{
+    width: 500px;
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+  }
+  .autocrop{
+   height: auto;
+   width: auto;
+   overflow: hidden;
+  }
+  .image{
+    position: center;
+    top: 1px;
+    border-radius:10%;
+    height: auto;
+    width:420px;
+    text-align:center;
+    border:dashed #3cd756;
+    
+  }
+  .btn{
+    font-size: 25px;
+    height:50px;
+    width: 200px;
+    size: 40px;
+    background: #fff;
+    text-shadow: 0 0 10px #518ee4,
+        0 0 20px #2dccf0,
+        0 0 40px #23c5ee,
+        0 0 80px #187ee4,
+        0 0 160px #3e65ff;
+    border-radius:50% 20% / 10% 40%;
+  }
+
+
+  ::-webkit-scrollbar {
+    display: none;
+}

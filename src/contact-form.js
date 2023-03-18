@@ -9,7 +9,7 @@ const cfConfig = {
     title: "Message Sent Successfully.",
     message:
       GEBID("contactform").getAttribute("success_text") ||
-      "Thank you for contacting me, I'll get back to you soon.",
+      "Thank you for contacting me, I'll get back to you not so soon.",
   },
 };
 
@@ -22,7 +22,7 @@ const cfbody = `
 
 const cfform = `
 <h3 class="title">Contact Me</h3>
-<p>Drop a message, I'll try to contact you soon.</p>
+<p>Drop a message, I'll try not to contact You xD :).</p>
 <div>
 	<input class="element" onchange="cfonChange('cfname')" id="cfname" type="text" name="name" placeholder="Name" autocomplete="off">
 	<input class="element" onchange="cfonChange('cfemail')" id="cfemail" type="email" name="email" placeholder="Email" autocomplete="off">
