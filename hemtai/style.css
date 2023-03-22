@@ -4,14 +4,15 @@ html, body {
     width: 100%;
   }
   body{
+    background-color:#734f96;
 /*     background: url(./bg.png); */
-      background-color:#074712;
-/*     background-size: cover;
-    background-position:center; */
+
+/*     background-size: cover; */
+    background-position:center; 
   }
   h1{
     position: relative;
-    top: 30px;
+    top: 25px;
     text-align: center;
     font-family:'Secular One', sans-serif;
     text-transform: uppercase;
@@ -51,9 +52,9 @@ html, body {
   .image{
     position: relative;
     top: 1px;
-    border-radius:10%;
+    border-radius:10%; 
     height: auto;
-    width:420px;
+    width: 420px;
     text-align:center;
     border:dashed #3cd756;
     
