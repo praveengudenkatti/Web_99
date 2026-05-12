@@ -1,12 +1,16 @@
 const API_URLS = [
-  "https://api.waifu.pics/sfw/neko",
+  /*"https://api.waifu.pics/sfw/neko",
   "https://api.waifu.pics/sfw/waifu",
   "https://api.waifu.pics/sfw/shinobu",
-  "https://api.waifu.pics/sfw/megumin",
-  "https://api.waifu.im/search/?included_tags=raiden-shogun",
-  "https://api.waifu.im/search/?included_tags=marin-kitagawa",
-  "https://api.waifu.im/search/?included_tags=maid",
-  "https://api.waifu.im/search/?included_tags=selfies",
+  "https://api.waifu.pics/sfw/megumin",*/
+  "https://api.waifu.im/images/?included_tags=raiden-shogun",
+  "https://api.waifu.im/images/?included_tags=marin-kitagawa",
+  "https://api.waifu.im/images/?included_tags=maid",
+  "https://api.waifu.im/images/?included_tags=selfies",
+  "https://api.waifu.im/images",
+  "https://api.waifu.im/images/?included_tags=oppai",
+  "https://api.waifu.im/images/?included_tags=uniform",
+  "https://api.waifu.im/images/?included_tags=waifu",
 ];
 
 const imgContainer = document.querySelector(".image-container");
@@ -28,8 +32,8 @@ async function getNewImage() {
     let imgUrl;
     if (data.url) {
       imgUrl = data.url;
-    } else if (data.images) {
-      imgUrl = data.images[0].url;
+    } else if (data.items) {
+      imgUrl = data.items[0].url;
     }
     imgContainer.innerHTML = `<img src="${imgUrl}" alt="Waifu image">`;
     currentImgUrl = imgUrl;

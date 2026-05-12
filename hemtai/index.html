@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,22 +11,77 @@
   <meta property="og:url" content="https://alam.eu.org/hemtai">
   <meta property="og:image" content="https://graph.org/file/52f87d96f33e99bfbfe3b.jpg">
   <meta property="og:description" content="A NSFW Site for my Homies :).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="./hemtai/style.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-  <script src="./hemtai/script.js"></script>
+
+  <!-- Animated background grid -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Corner decorations -->
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+
   <div class="header">
-    <h1>Hentai Picture</h1>
+    <div class="header-inner">
+      <div class="tag-line">[ HOMIES ONLY ]</div>
+      <h1><span class="h1-bracket">&lt;</span>HENTAI<span class="h1-sep">/</span>PIC<span class="h1-bracket">&gt;</span></h1>
+      <div class="subtitle">— NSFW RANDOMIZER v2.0 —</div>
+    </div>
   </div>
+
   <div class="container">
-    <div class="autocrop" id="img-container">
 
+    <!-- Image card -->
+    <div class="card" id="card">
+      <div class="card-border-top"></div>
+
+      <!-- Loading state -->
+      <div class="loader-wrap" id="loader">
+        <div class="loader-ring"></div>
+        <div class="loader-ring ring2"></div>
+        <div class="loader-text">LOADING<span class="dots">...</span></div>
+      </div>
+
+      <!-- Image slot -->
+      <div class="autocrop" id="img-container"></div>
+
+      <!-- Card footer info bar -->
+      <div class="card-footer" id="card-footer">
+        <span class="footer-tag" id="api-tag">WAIFU.PICS</span>
+        <span class="footer-sep">|</span>
+        <span class="footer-label">RANDOM</span>
+        <span class="footer-sep">|</span>
+        <span class="footer-tag blink-dot">● LIVE</span>
+      </div>
     </div>
+
+    <!-- Button row -->
     <div class="refresh">
-      <input class="btn" type="button" value="New image" onClick="window.location.reload(true)">
+      <button class="btn" id="refresh-btn" onclick="reloadImage()">
+        <span class="btn-icon">↺</span>
+        <span class="btn-text">NEW IMAGE</span>
+        <div class="btn-shine"></div>
+      </button>
     </div>
-  </div>
-</body>
 
+    <!-- Bottom stat row -->
+    <div class="stat-row">
+      <div class="stat"><span class="stat-label">SOURCE</span><span class="stat-val" id="stat-source">—</span></div>
+      <div class="stat"><span class="stat-label">STATUS</span><span class="stat-val" id="stat-status">LOADING</span></div>
+      <div class="stat"><span class="stat-label">COUNT</span><span class="stat-val" id="stat-count">0</span></div>
+    </div>
+
+  </div>
+
+  <script src="./hemtai/script.js"></script>
+</body>
 </html>
